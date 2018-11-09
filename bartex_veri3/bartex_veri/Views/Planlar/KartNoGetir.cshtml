@@ -1,0 +1,18 @@
+﻿@using System.Data
+@model System.Data.DataTable
+
+
+@{
+    ViewBag.Title = "KartNoGetir";
+}
+
+<h2>KartNoGetir</h2>
+
+<h1>TEST</h1>
+
+@foreach(DataRow row in Model.Rows)
+{
+    @row[0] 
+    @row[1]
+    @row[2]
+}

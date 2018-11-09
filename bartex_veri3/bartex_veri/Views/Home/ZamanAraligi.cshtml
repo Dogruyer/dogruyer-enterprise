@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "ZamanAralıgı";
+}
+
+<h2>ZamanAralıgı</h2>
+
+
+<h3>Belirli Tarihler Arası Değer Alma</h3>
+<form action="Home/ZamanAraligi" method="get">
+
+
+    <input type="date" name="baslangicTarih" placeholder="Başlangıç Tarihi Giriniz :" />
+    <input type="date" name="bitisTarih" placeholder="Başlangıç Tarihi Giriniz :" />
+    <input type="submit" value="Onayla" />
+
+</form>
+
+
+<h1>Gelen Veriler : </h1>
+
+@*<table border="1">
+    @foreach (System.Data.DataRow row in Model.Rows)
+    {
+        <tr>
+            <th>Stok Adı</th>
+
+            <th>Miktar</th>
+
+            <th>Tarih :</th>
+
+        </tr>
+        <tr>
+            <td>@row["Stok Adı"]</td>
+
+            <td>@row["Miktar"]</td>
+
+            <td>@row["Tarih"]</td>
+
+        </tr>
+
+
+    }
+</table>*@
