@@ -1,56 +1,14 @@
 ﻿@model System.Data.DataTable
-@using System.Data;
-
-
+@using System.Data
 
 @{
     ViewBag.Title = "Home Page";
 }
-
-
-<form action="" method="get">
-
-
-    <input type="text" name="ilkTarih" placeholder="Tarihi Giriniz :" />
-    <input type="submit" value="Onayla" />
-
-</form>
-
-<br />
-
-@*<h3>Belirli Tarihler Arası Değer Alma</h3>
-<form action="" method="get">
-
-
-    <input type="text" name="baslangicTarih" placeholder="Başlangıç Tarihi Giriniz :" />
-    <input type="text" name="bitisTarih" placeholder="Başlangıç Tarihi Giriniz :" />
-    <input type="submit" value="Onayla" />
-
-</form>
-
-
-<h1>Gelen Veriler : </h1>
-
 <table border="1">
-        @foreach (System.Data.DataRow row in Model.Rows)
-        {
-            <tr>
-                <th>Stok Adı</th>
-            
-                <th>Miktar</th>
-                
-                <th>Tarih :</th>
-            
-           </tr>
+    @foreach (System.Data.DataRow row in Model.Rows)
+    {
         <tr>
-            <td>@row["Stok Adı"]</td>
-
-            <td>@row["Miktar"]</td>
-
-            <td>@row["Tarih"]</td>
-
+            <td>@row[1]</td>
         </tr>
-
-    
     }
-</table>*@
+</table>
