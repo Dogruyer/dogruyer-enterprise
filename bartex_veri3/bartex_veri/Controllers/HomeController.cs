@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bartex_veri.xml;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -10,10 +11,14 @@ namespace bartex_veri.Controllers
 {
     public class HomeController : Controller
     {
+
+        //Giriş Tablosu Kısımları 
+
+
         public ActionResult Index(string ilkTarih)
         {
             
-                var connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source= C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
+                var connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source= C:\Users\Dogruyer_5\Desktop\bartex_aktarma1.mdb";
 
                 DataTable dt = new DataTable();
                 var unitsSQL = "SELECT * From Giriş Where Tarih LIKE '" + ilkTarih + "%" + "'";
@@ -25,44 +30,24 @@ namespace bartex_veri.Controllers
                 }
 
 
-                DataRow row = dt.NewRow();
-                dt.Rows.Add(row["Stok Adı"]);
-                dt.Rows.Add(row["Miktar"]);
+                //DataRow row = dt.NewRow();
+                //dt.Rows.Add(row["Stok Adı"]);
+                //dt.Rows.Add(row["Miktar"]);
 
 
-                //dt.Rows.Add(row);
+            XMLFormat xml = new XMLFormat();
 
-                return View(dt);
+            xml.ConvertDataTableToXMLDataString(dt);
+
+
+
+
+
+                
+
+           return View(dt);
             
         }
-
-
-        //public ActionResult ZamanAraligi(string baslangıcTarih,string bitisTarih)
-        //{
-
-        //    var connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source= C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
-
-        //    DataTable dt = new DataTable();
-        //    var unitsSQL = "Select * from Giriş WHERE [İrsaliye Tarihi] BETWEEN '"+baslangıcTarih+"' and '"+bitisTarih+"' Order By Tarih ";
-        //    using (var conn = new OleDbConnection(connect))
-        //    {
-        //        var cmd = new OleDbCommand(unitsSQL, conn);
-        //        var da = new OleDbDataAdapter(cmd);
-        //        da.Fill(dt);
-        //    }
-
-
-        //    DataRow row = dt.NewRow();
-        //    dt.Rows.Add(row["Stok Adı"]);
-        //    dt.Rows.Add(row["Miktar"]);
-        //    dt.Rows.Add(row["Tarih"]);
-
-
-        //    //dt.Rows.Add(row);
-
-        //    return View();
-
-        //}
 
 
 

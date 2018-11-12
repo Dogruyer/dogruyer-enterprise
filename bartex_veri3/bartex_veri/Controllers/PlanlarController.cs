@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bartex_veri.xml;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -12,12 +13,13 @@ namespace bartex_veri.Controllers
     public class PlanlarController : Controller
     {
 
-        string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source= C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
+        string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source= C:\Users\Dogruyer_5\Desktop\bartex_aktarma1.mdb";
         DataTable dt = new DataTable();
         // TODO: Belirlenen KartNumarasına Göre Planlar Tablosu Getir
+        //[Route("Planlar/KartNo/{id}")]
         public ActionResult KartNoGetir(int? id)
         {
-            if(id != null)
+            if (id != null)
             {
                 using (var con = new OleDbConnection(connect))
                 {
@@ -27,18 +29,21 @@ namespace bartex_veri.Controllers
                     da.Fill(dt);
                 }
             }
-            
-            return View(dt);
+            XMLFormat xml = new XMLFormat();
+
+            ViewData["Test"]= xml.ConvertDataTableToXMLDataString(dt);
+
+            return View();
         }
 
         
         //Belirlenen Tarihe Göre Giriş Tablosu Getir
-        // yyyy-MM-dd   -> Yıl - Ay - Gün
+        // Gün - Ay - Yıl 
         [Route("Planlar/Tarih/{belirlenenTarih}")]
         public ActionResult Tarih(string belirlenenTarih)
         {
             var tarihCevir = belirlenenTarih.Replace("-", ".");
-            var tsql = "SELECT * From Giriş Where Tarih LIKE '" + tarihCevir + "%" + "'";
+            var tsql = "SELECT * From Planlar Where İsletmeTarih LIKE '" + tarihCevir + "%" + "'";
             using (var con = new OleDbConnection(connect))
             {
                 
@@ -56,18 +61,15 @@ namespace bartex_veri.Controllers
         }
 
 
-        // yyyy-MM-dd -> Yıl - Ay - Gün
+        // yyyy-MM-dd -> Yıl - Ay - Gün Şeklinde.
         [Route("Planlar/TarihAraligi/{baslangic}/{bitis}")]
-        public ActionResult belirlenenTarihlerArasi(string baslangic,string bitis)
+        public ActionResult BelirlenenTarihlerArasi(string baslangic,string bitis)
         {
             var basTarihCevir = baslangic.Replace("-", "/");
             var bitisTarihCevir = bitis.Replace("-", "/");
 
 
-            //string baslangicb = "2009-01-15 16:43:02.000";
-            //string bitisdeger = "2008-05-31 11:09:00.000";
-            //var tsql = "Select * From Giriş Where Tarih BETWEEN '" + Convert.ToString(baslangic) + "' and '" + Convert.ToString(bitis) + "'";,
-            var tsql= "SELECT * From Giriş Where Tarih Between #"+baslangic+"# And #"+bitis+"# Order By Tarih";
+            var tsql= "SELECT * From Giriş Where İsletmeTarih Between #"+baslangic+"# And #"+bitis+"# Order By Tarih";
             using (var con = new OleDbConnection(connect))
             {
 
@@ -81,6 +83,14 @@ namespace bartex_veri.Controllers
 
             return View();
         }
+
+        //public ActionResult PlanlarSonBirAy()
+        //{
+        //    var tsql = "SELECT * FROM Planlar Where İsletmeTarih 
+
+        //    return View();
+
+        //}
 
     }
 }
