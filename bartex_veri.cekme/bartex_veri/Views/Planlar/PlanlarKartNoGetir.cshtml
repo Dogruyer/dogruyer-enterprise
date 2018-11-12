@@ -1,14 +1,14 @@
 ﻿@model System.Data.DataTable
 @using System.Data
-
 @{
-    ViewBag.Title = "Home Page";
-}
-<table border="1">
+    Layout = null;
+ }
+
     @foreach (System.Data.DataRow row in Model.Rows)
     {
-        <tr>
-            <td>@row[1]</td>
-        </tr>
+        for(int i=0; i < Model.Columns.Count; i++)
+        {
+        <p>@row[i]</p>
+        }
     }
-</table>
+

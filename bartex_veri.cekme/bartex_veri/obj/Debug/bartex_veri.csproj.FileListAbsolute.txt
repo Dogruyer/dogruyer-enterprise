@@ -38,3 +38,83 @@ C:\Users\Dogruyer_2\Desktop\bartex_veri\bartex_veri\bin\Newtonsoft.Json.xml
 C:\Users\Dogruyer_2\Desktop\bartex_veri\bartex_veri\obj\Debug\bartex_veri.csprojResolveAssemblyReference.cache
 C:\Users\Dogruyer_2\Desktop\bartex_veri\bartex_veri\obj\Debug\bartex_veri.dll
 C:\Users\Dogruyer_2\Desktop\bartex_veri\bartex_veri\obj\Debug\bartex_veri.pdb
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\csc.exe
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\vbc.exe
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\bartex_veri.dll.config
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\bartex_veri.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\bartex_veri.pdb
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\Antlr3.Runtime.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.Helpers.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.Mvc.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.Optimization.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.Razor.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.WebPages.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\WebGrease.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.Helpers.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.Mvc.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.Optimization.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.Razor.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.WebPages.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\Antlr3.Runtime.pdb
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\obj\Debug\bartex_veri.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\obj\Debug\bartex_veri.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex_veri.cekme\bartex_veri\obj\Debug\bartex_veri.pdb
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\csc.exe
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\vbc.exe
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\bartex_veri.dll.config
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\bartex_veri.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\bartex_veri.pdb
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\Antlr3.Runtime.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\Newtonsoft.Json.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.Helpers.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.Mvc.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.Optimization.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.Razor.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.WebPages.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\WebGrease.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.Helpers.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.Mvc.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.Optimization.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.Razor.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.WebPages.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\Antlr3.Runtime.pdb
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\bin\Newtonsoft.Json.xml
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\obj\Debug\bartex_veri.csprojResolveAssemblyReference.cache
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\obj\Debug\bartex_veri.dll
+C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex sütün filtreleme\bartex_veri\obj\Debug\bartex_veri.pdb

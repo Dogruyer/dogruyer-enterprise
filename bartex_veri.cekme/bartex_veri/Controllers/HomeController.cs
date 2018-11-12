@@ -5,19 +5,19 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data;
-
-
+using System.Threading.Tasks;
+using bartex_veri.Models;
 namespace bartex_veri.Controllers
 {
     public class HomeController : Controller
     {
         public Array MyProperty { get; set; }
-        
+
         public ActionResult Index()
         {
-            var connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source= C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex\bartex_baglanti.mdb"; 
- 
-             DataTable dt = new DataTable();
+            var connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source= C:\Users\Dogruyer_2\Desktop\oztektekstil\bartex\bartex_baglanti.mdb";
+
+            DataTable dt = new DataTable();
             var unitsSQL = "SELECT * FROM Planlar";
             using (var conn = new OleDbConnection(connect))
             {
@@ -25,8 +25,7 @@ namespace bartex_veri.Controllers
                 var da = new OleDbDataAdapter(cmd);
                 da.Fill(dt);
             }
-           
-            return View();
+            return View(dt);
         }
 
         public ActionResult About()
