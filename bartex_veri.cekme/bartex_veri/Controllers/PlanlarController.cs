@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
@@ -23,13 +26,13 @@ namespace bartex_veri.Controllers
                 {
                     var tsql = "SELECT * From Planlar Where KartNo =" + id + " ";
                     var command = new OleDbCommand(tsql, con);
-                    var da = new OleDbDataAdapter(command);
+                    var da = new OleDbDataAdapter(command);         
                     da.Fill(dt);
-                    islem.LogEkle(dt);
+                    islem.LogEkle(dt);                
                 }
             }
-            string xml = System.IO.File.ReadAllText(Server.MapPath("~/kartno.xml"));
-            return Content(xml);
+            string xml = System.IO.File.ReadAllText(Server.MapPath("~/kartno.xml"));               
+            return Content(xml,"text/xml");
         }
     }
 }

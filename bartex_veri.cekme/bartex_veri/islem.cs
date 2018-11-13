@@ -11,7 +11,6 @@ namespace bartex_veri
     {
         public static void LogEkle(DataTable table)
         {
-                
                 XmlDocument document = new XmlDocument();
                 document.Load(HttpContext.Current.Server.MapPath("~/kartno.xml"));                
                 XmlNode root = document.SelectSingleNode("/root");
@@ -22,7 +21,7 @@ namespace bartex_veri
             {
                 foreach (System.Data.DataColumn column in table.Columns)
                 {
-                    var colunmname = column.ColumnName.Replace(" ","");
+                    var colunmname = column.ColumnName.Replace(" ", "");
                     xdf.InnerXml = "<item><"+ colunmname + ">" + row[column].ToString() + "</"+ colunmname + "></item>";
                     root.InsertAfter(xdf, root.LastChild);
                     document.Save(HttpContext.Current.Server.MapPath("~/kartno.xml"));
