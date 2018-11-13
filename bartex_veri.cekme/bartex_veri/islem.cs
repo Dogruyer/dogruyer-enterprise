@@ -23,10 +23,10 @@ namespace bartex_veri
                 {
                     var colunmname = column.ColumnName.Replace(" ", "");
                     xdf.InnerXml = "<item><"+ colunmname + ">" + row[column].ToString() + "</"+ colunmname + "></item>";
-                    root.InsertAfter(xdf, root.LastChild);
-                    document.Save(HttpContext.Current.Server.MapPath("~/kartno.xml"));
+                    root.InsertAfter(xdf, root.LastChild);                  
                 }
             }
+            document.Save(HttpContext.Current.Server.MapPath("~/kartno.xml"));
         }
     }
 }

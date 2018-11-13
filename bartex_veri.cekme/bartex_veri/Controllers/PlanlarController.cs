@@ -32,7 +32,47 @@ namespace bartex_veri.Controllers
                 }
             }
             string xml = System.IO.File.ReadAllText(Server.MapPath("~/kartno.xml"));               
-            return Content(xml,"text/xml");
+            return Content(xml,"xml");
+        }
+
+
+        //GÜN/AY/YIL FORMATINDA GİR ÖNEMLİ!!!
+
+        [Route("Planlar/Tarih/{belirlenenTarih}")]
+        public ActionResult Tarih(string belirlenenTarih)
+        {
+            var tarihCevir = belirlenenTarih.Replace("-", ".");
+            var tsql = "SELECT * From Planlar Where İsletmeTarih LIKE '" + tarihCevir + "%" + "'";
+            using (var con = new OleDbConnection(connect))
+            {
+                var command = new OleDbCommand(tsql, con);
+                var da = new OleDbDataAdapter(command);
+                da.Fill(dt);
+                islem.LogEkle(dt);
+            }
+            string xml = System.IO.File.ReadAllText(Server.MapPath("~/kartno.xml"));
+            return Content(xml, "text/xml");
+        }
+
+
+
+        //ay/gün/yıl FORMATINDA GİR ÖNEMLİ!!!
+
+        [Route("Planlar/TarihAraligi/{baslangic}/{bitis}")]
+        public ActionResult BelirlenenTarihlerArasi(string baslangic, string bitis)
+        {
+            var basTarihCevir = baslangic.Replace("-", "/");
+            var bitisTarihCevir = bitis.Replace("-", "/");
+            var tsql = "SELECT * From Planlar Where İsletmeTarih Between #" + basTarihCevir + "# And #" + bitisTarihCevir + "#";
+            using (var con = new OleDbConnection(connect))
+            {
+                var command = new OleDbCommand(tsql, con);
+                var da = new OleDbDataAdapter(command);
+                da.Fill(dt);
+                islem.LogEkle(dt);
+            }
+            string xml = System.IO.File.ReadAllText(Server.MapPath("~/kartno.xml"));
+            return Content(xml, "text/xml");
         }
     }
 }

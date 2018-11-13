@@ -69,7 +69,7 @@ namespace bartex_veri.Controllers
             var bitisTarihCevir = bitis.Replace("-", "/");
 
 
-            var tsql= "SELECT * From Giriş Where İsletmeTarih Between #"+baslangic+"# And #"+bitis+"# Order By Tarih";
+            var tsql= "SELECT * From Giriş Where İsletmeTarih Between #"+baslangic+"# And #"+bitis+"# Order By asc";
             using (var con = new OleDbConnection(connect))
             {
 

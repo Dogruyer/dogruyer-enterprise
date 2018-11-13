@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <item>
-    <KartNo>296499</KartNo>
+    <KartNo>296496</KartNo>
   </item>
   <item>
-    <SipNo>05/92034</SipNo>
+    <SipNo>05/92003</SipNo>
   </item>
   <item>
-    <ÇalışılacakMetraj>100</ÇalışılacakMetraj>
+    <ÇalışılacakMetraj>7</ÇalışılacakMetraj>
   </item>
   <item>
     <İstenenEn>0</İstenenEn>
@@ -17,7 +17,8 @@
     </TerminTarihi>
   </item>
   <item>
-    <Op1>50</Op1>
+    <Op1>
+    </Op1>
   </item>
   <item>
     <DigerMiktar>
@@ -27,6 +28,6 @@
     <DigerBirim>KG</DigerBirim>
   </item>
   <item>
-    <İsletmeTarih>2.1.2006 13:22:57</İsletmeTarih>
+    <İsletmeTarih>2.1.2006 08:57:42</İsletmeTarih>
   </item>
 </root>
