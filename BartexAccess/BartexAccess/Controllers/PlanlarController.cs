@@ -11,9 +11,9 @@ namespace BartexAccess.Controllers
     public class PlanlarController : Controller
     {
         // user id=hous7086; password=6a7a5a3ebdT; database=bartex_aktarma.mdb;Persist Security Info=False
-
+        string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
         DataTable dt = new DataTable();
-        string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma.mdb";
+        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma.mdb";
         //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
         // GET: Planlar
         [Route("Planlar/SipNo/{id}")]
@@ -86,28 +86,6 @@ namespace BartexAccess.Controllers
             return Content(xml, "text/xml");
         }
 
-        //GMM Tablosundaki ' Sipariş No'ya göre verileri getirme
-        [Route("GMMTablo/Siparis/{id}")]
-        public ActionResult GmmSipNo(string id)
-        {
-            if (id != "")
-            {
-
-                var cevirID = id.Replace("-", "/");
-                var tsql = "SELECT * From dbo_GMMTablo Where Sipariş =" + "'" + cevirID + "'" + " ";
-                using (var conn = new OleDbConnection(connect))
-                {
-                    var cmd = new OleDbCommand(tsql, conn);
-                    var da = new OleDbDataAdapter(cmd);
-                    da.Fill(dt);
-                }
-
-                islem.LogEkle(dt);
-
-            }
-            string xml = System.IO.File.ReadAllText(Server.MapPath("~/kartno.xml"));
-            return Content(xml, "xml");
-
-        }
+       
     }
 }
