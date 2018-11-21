@@ -22,6 +22,7 @@ namespace BartexAccess
                 foreach (System.Data.DataColumn column in table.Columns)
                 {
                     var colunmname = column.ColumnName.Replace(" ", "");
+                    var columnTR = String.Join("", column.ColumnName.Normalize(System.Text.NormalizationForm.FormD).Where(x => char.GetUnicodeCategory(x) != System.Globalization.UnicodeCategory.NonSpacingMark));
                     xdf.InnerXml = "<item><" + colunmname + ">" + row[column].ToString() + "</" + colunmname + "></item>";
                     root.InsertAfter(xdf, root.LastChild);
                 }

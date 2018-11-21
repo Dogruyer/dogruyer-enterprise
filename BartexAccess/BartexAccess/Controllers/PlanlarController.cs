@@ -14,7 +14,7 @@ namespace BartexAccess.Controllers
 
         DataTable dt = new DataTable();
         string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma.mdb";
-
+        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
         // GET: Planlar
         [Route("Planlar/SipNo/{id}")]
         public ActionResult SipNo(string id)
@@ -25,7 +25,7 @@ namespace BartexAccess.Controllers
 
 
                 var cevirID = id.Replace("-", "/");
-                var tsql = "SELECT * From Planlar Where SipNo =" + "'" + cevirID + "'" + " ";
+                var tsql = "SELECT Kartno,SipNo, ÇalışılacakMetraj as CalisilacakMetraj,İstenenEn as IstenenEn,[Termin Tarihi],İsletmeTarih as IsletmeTarih From Planlar Where SipNo =" + "'" + cevirID + "'" + " ";
                 using (var conn = new OleDbConnection(connect))
                 {
                     var cmd = new OleDbCommand(tsql, conn);
@@ -47,7 +47,7 @@ namespace BartexAccess.Controllers
         public ActionResult Tarih(string belirlenenTarih)
         {
             var tarihCevir = belirlenenTarih.Replace("-", ".");
-            var tsql = "SELECT * From Planlar Where İsletmeTarih LIKE '" + tarihCevir + "%" + "'";
+            var tsql = "SELECT Kartno,SipNo, ÇalışılacakMetraj as CalisilacakMetraj,İstenenEn as IstenenEn,[Termin Tarihi],İsletmeTarih as IsletmeTarih From Planlar Where İsletmeTarih LIKE '" + tarihCevir + "%" + "'";
             using (var conn = new OleDbConnection(connect))
             {
                 var cmd = new OleDbCommand(tsql, conn);
@@ -64,12 +64,16 @@ namespace BartexAccess.Controllers
 
         //ay/gün/yıl FORMATINDA GİR ÖNEMLİ!!!
 
-        [Route("Planlar/TarihAraligi/{baslangic}/{bitis}")]
-        public ActionResult BelirlenenTarihlerArasi(string baslangic, string bitis)
+        [Route("Planlar/TarihAraligi/{sorgu}")]
+        public ActionResult BelirlenenTarihlerArasi(string sorgu)
         {
-            var basTarihCevir = baslangic.Replace("-", "/");
-            var bitisTarihCevir = bitis.Replace("-", "/");
-            var tsql = "SELECT * From Planlar Where İsletmeTarih Between #" + basTarihCevir + "# And #" + bitisTarihCevir + "#";
+            var bas = sorgu.Split('a')[0];
+            var bit = sorgu.Split('a')[1];
+
+            var basTarihCevir = bas.Replace("-", "/");
+            var bitisTarihCevir = bit.Replace("-", "/");
+
+            var tsql = "SELECT Kartno,SipNo, ÇalışılacakMetraj as CalisilacakMetraj,İstenenEn as IstenenEn,[Termin Tarihi],İsletmeTarih as IsletmeTarih From Planlar Where İsletmeTarih Between #" + basTarihCevir + "# And #" + bitisTarihCevir + "#";
             using (var conn = new OleDbConnection(connect))
             {
                 var cmd = new OleDbCommand(tsql, conn);
