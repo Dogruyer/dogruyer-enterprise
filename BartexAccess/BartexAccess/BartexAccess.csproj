@@ -107,11 +107,17 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GirisController.cs" />
+    <Compile Include="Controllers\GirisFiyatlarController.cs" />
     <Compile Include="Controllers\GMMTabloController.cs" />
+    <Compile Include="Controllers\MalzemeHareketiController.cs" />
+    <Compile Include="Controllers\PatReceteController.cs" />
+    <Compile Include="Controllers\ReceteController.cs" />
     <Compile Include="Controllers\OpsController.cs" />
     <Compile Include="Controllers\PlanlarController.cs" />
     <Compile Include="Controllers\PrgController.cs" />
+    <Compile Include="Controllers\ReceteDesenController.cs" />
     <Compile Include="Controllers\TabloSiparisFoyuController.cs" />
+    <Compile Include="Controllers\UretimReceteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -132,12 +138,18 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\GirisFiyatlar\" />
     <Folder Include="Views\Giris\" />
     <Folder Include="Views\GMMTablo\" />
+    <Folder Include="Views\Islem\" />
+    <Folder Include="Views\MalzemeHareketi\" />
     <Folder Include="Views\Ops\" />
+    <Folder Include="Views\PatRecete\" />
     <Folder Include="Views\Planlar\" />
     <Folder Include="Views\Prg\" />
+    <Folder Include="Views\ReceteDesen\" />
     <Folder Include="Views\TabloSiparisFoyu\" />
+    <Folder Include="Views\UretimRecete\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
