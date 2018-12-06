@@ -10,8 +10,8 @@ namespace BartexAccess.Controllers
 {
     public class GirisController : Controller
     {
-        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma.mdb";
-        string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
+        string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma1.mdb";
+        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
         DataTable dt = new DataTable();
         //GMM Tablosundaki ' Sipariş No'ya göre verileri getirme
         [Route("Giris/PartiNo/{id}")]

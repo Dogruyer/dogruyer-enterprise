@@ -10,11 +10,11 @@ namespace BartexAccess.Controllers
 {
     public class PlanlarController : Controller
     {
-        // user id=hous7086; password=6a7a5a3ebdT; database=bartex_aktarma.mdb;Persist Security Info=False
-        string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
-        DataTable dt = new DataTable();
-        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma.mdb";
+        
         //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
+        DataTable dt = new DataTable();
+        string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma1.mdb";
+
         // GET: Planlar
         [Route("Planlar/SipNo/{id}")]
         public ActionResult SipNo(string id)
