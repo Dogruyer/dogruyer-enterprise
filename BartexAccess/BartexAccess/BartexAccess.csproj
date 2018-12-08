@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DesenDigitalController.cs" />
     <Compile Include="Controllers\GirisController.cs" />
     <Compile Include="Controllers\GirisFiyatlarController.cs" />
     <Compile Include="Controllers\GMMTabloController.cs" />
@@ -116,6 +117,9 @@
     <Compile Include="Controllers\PlanlarController.cs" />
     <Compile Include="Controllers\PrgController.cs" />
     <Compile Include="Controllers\ReceteDesenController.cs" />
+    <Compile Include="Controllers\StokController.cs" />
+    <Compile Include="Controllers\StokEnSonGirenController.cs" />
+    <Compile Include="Controllers\StokToplamGirenController.cs" />
     <Compile Include="Controllers\TabloSiparisFoyuController.cs" />
     <Compile Include="Controllers\UretimReceteController.cs" />
     <Compile Include="Global.asax.cs">
@@ -138,6 +142,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\DesenDigital\" />
     <Folder Include="Views\GirisFiyatlar\" />
     <Folder Include="Views\Giris\" />
     <Folder Include="Views\GMMTablo\" />
@@ -148,6 +153,10 @@
     <Folder Include="Views\Planlar\" />
     <Folder Include="Views\Prg\" />
     <Folder Include="Views\ReceteDesen\" />
+    <Folder Include="Views\ReceteMalzemeStok\" />
+    <Folder Include="Views\StokEnSonGiren\" />
+    <Folder Include="Views\StokToplamGiren\" />
+    <Folder Include="Views\Stok\" />
     <Folder Include="Views\TabloSiparisFoyu\" />
     <Folder Include="Views\UretimRecete\" />
   </ItemGroup>

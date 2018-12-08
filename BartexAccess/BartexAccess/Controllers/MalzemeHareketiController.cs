@@ -10,8 +10,9 @@ namespace BartexAccess.Controllers
 {
     public class MalzemeHareketiController : Controller
     {
+        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\testdogruyer.duckdns.org\httpdocs\bartex_aktarma1.mdb";
         string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma1.mdb";
-        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
+        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma1.mdb";
         DataTable dt = new DataTable();
         [Route("MalzemeHareketi/Adi/{encodingType}")]
         public ActionResult Adi(string encodingType)
@@ -21,8 +22,8 @@ namespace BartexAccess.Controllers
 
 
             //var cevirID = .Replace("_", " ");
-            var tsql = "SELECT [Lot No], [Fiş Numarası] as FisNumarasi, FirmaAdi, [Kayıt Tarihi], Grubu, Adı as Adi, [Depoya Giren Miktar], [Çekilen Miktar] as CekilenMiktar, [Maliyet Merkezi], [Çeken Personel] as CekenPersonel, [Geliş Birim Fiyatı] as GelisBirimFiyati, [İskonto] as Iskonto, [Toplam Fiyat], Açıklama as Acıklama, [Döviz Cinsi] as DovizCinsi, DM, ABD, TL, SW, Tarih  From [dbo_Malzeme Hareketi] Where Adı =" + "'" + deger + "'" + " ";
-                using (var conn = new OleDbConnection(connect))
+            var tsql = "SELECT [Lot No], [Fiş Numarası] as FisNumarasi, FirmaAdi, [Kayıt Tarihi], Grubu, Adı as Adi, [Depoya Giren Miktar], [Çekilen Miktar] as CekilenMiktar, [Maliyet Merkezi], [Çeken Personel] as CekenPersonel, [Geliş Birim Fiyatı] as GelisBirimFiyati,[Toplam Fiyat], Açıklama as Acıklama, [Döviz Cinsi] as DovizCinsi, DM, ABD,SW  From [dbo_Malzeme Hareketi] Where Adı =" + "'" + deger + "'" + " ";
+            using (var conn = new OleDbConnection(connect))
                 {
                     var cmd = new OleDbCommand(tsql, conn);
                     var da = new OleDbDataAdapter(cmd);

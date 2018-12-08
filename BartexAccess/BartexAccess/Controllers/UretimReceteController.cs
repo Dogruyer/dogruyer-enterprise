@@ -11,8 +11,9 @@ namespace BartexAccess.Controllers
     public class UretimReceteController : Controller
     {
 
+        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\testdogruyer.duckdns.org\httpdocs\bartex_aktarma1.mdb";
         string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma1.mdb";
-        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma.mdb";
+        //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma1.mdb";
         DataTable dt = new DataTable();
         
         [Route("UretimRecete/SipNo/{id}")]
@@ -22,7 +23,7 @@ namespace BartexAccess.Controllers
             {
                 
                 var cevirID = id.Replace("-", "/");
-                var tsql = "SELECT * From UretimRecete Where SiparisNo =" + "'" + cevirID + "'" + " ";
+                var tsql = "SELECT DISTINCT ReceteNo,Tarih From UretimRecete Where SiparisNo =" + "'" + cevirID + "'" + " ";
                 using (var conn = new OleDbConnection(connect))
                 {
                     var cmd = new OleDbCommand(tsql, conn);

@@ -8,31 +8,35 @@ using System.Web.Mvc;
 
 namespace BartexAccess.Controllers
 {
-    public class ReceteController : Controller
+    public class StokEnSonGirenController : Controller
     {
+        // GET: StokEnSonGiren
         //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\testdogruyer.duckdns.org\httpdocs\bartex_aktarma1.mdb";
         string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=\Inetpub\vhosts\7houseburger.com\demo\bartex_aktarma1.mdb";
         //string connect = @"Provider=Microsoft.Jet.OleDb.4.0;Data Source=C:\Users\Dogruyer_5\Desktop\bartex_aktarma1.mdb";
         DataTable dt = new DataTable();
-        [Route("Recete/ReceteNo/{sorgu}")]
-        public ActionResult ReceteNo(string sorgu)
+        [Route("StokGiren/Adi/{sayi}/{encodingType}/{tarih}")]
+        public ActionResult Adi(int sayi, string encodingType, string tarih)
         {
-            //var bas = sorgu.Split('-')[0];
-            //var bit = sorgu.Split('-')[1];
+            var base64EncodedBytes = System.Convert.FromBase64String(encodingType);
+            string deger = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
 
-
-
-            var tsql = "SELECT Adi,SUM(Miktar) From Reçete WHERE ReceteNo='" + sorgu + "' GROUP BY Adi";
+            var basTarihCevir = tarih.Replace("-", "/");
+            //var cevirID = .Replace("_", " ");
+            // 31 Aralık 2017 ' ye kadar olan stok Ambar 
+            var tsql = "SELECT TOP " + sayi + " [Depoya Giren Miktar] as StokAmbar From [dbo_Malzeme Hareketi]   Where Adı =" + "'" + deger + "' AND [Depoya Giren Miktar] > 0 AND [Kayıt Tarihi] <= #" + basTarihCevir + "# Order By [Kayıt Tarihi] DESC";
             using (var conn = new OleDbConnection(connect))
             {
                 var cmd = new OleDbCommand(tsql, conn);
                 var da = new OleDbDataAdapter(cmd);
                 da.Fill(dt);
             }
+
             islem.LogEkle(dt);
 
+
             string xml = System.IO.File.ReadAllText(Server.MapPath("~/kartno.xml"));
-            return Content(xml, "text/xml");
+            return Content(xml, "xml");
         }
     }
 }
